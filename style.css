@@ -105,8 +105,8 @@ footer{
 
 .profile 
 { 
-    width:150px; 
-    height:150px; 
+    width:200px; 
+    height:250px; 
     object-position:top; 
     object-fit:cover; 
     border-radius:50px; 
