@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .about{
     font-family: Arial;
     margin:0;
@@ -95,7 +94,8 @@ footer{
 { 
     width:200px; 
     height:250px; 
-=======
+}
+    
 .container { 
     width: 50%;
     margin: auto;
@@ -107,7 +107,6 @@ footer{
 { 
     width:150px; 
     height:150px; 
->>>>>>> 3c86af31d76971c7c68c2565239a12cd0ae8d380
     object-position:top; 
     object-fit:cover; 
     border-radius:50px; 
@@ -169,7 +168,8 @@ footer{
     background : linear-gradient(to right, blue, orange); 
     color:wheat;
     font-family: 'Courier New';
-=======
+}
+
 .section 
 { 
     background : linear-gradient(to right, lightblue, darkblue); 
@@ -189,5 +189,4 @@ body
 { 
     background : linear-gradient(to right, lightblue, darkblue); 
     color:black; 
->>>>>>> 3c86af31d76971c7c68c2565239a12cd0ae8d380
 }
