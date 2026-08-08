@@ -41,7 +41,7 @@ const terminalData = {
 [EXPERIENCE]: DevOps & Cloud Engineer @ Pixlpro Consulting (2025-2026)
               DevOps & Cloud Trainer @ Pixlpro Consulting (2025)
 [EDUCATION]: B.E. Computer Science & Engineering (2024)
-[STATUS]: Ready to automate cloud infrastructure & CI/CD pipelines!`,
+[STATUS]: AWS Cloud Infrastructure, CI/CD, Containerization & Automation Professional!`,
 
     skills: `> cat skills.yml
 containers:
