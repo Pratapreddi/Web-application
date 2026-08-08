@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratapareddi Jagannath Kurlageri - DevOps Engineer</title>
+    <title>Pratapareddi Jagannath Kurlageri | DevOps & Cloud Engineer</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,173 +17,424 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="particles-js"></div> <!-- Dynamic background -->
+    <!-- Custom Cyber Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
 
-    <nav>
-        <div class="logo">&lt;Pratap /&gt;</div>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">Pratap</span>
+            <span class="logo-slash">/</span>
+            <span class="logo-bracket">&gt;</span>
+            <span class="status-indicator"></span>
+        </div>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about"><i class="fas fa-user-astronaut"></i> About</a></li>
+            <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+            <li><a href="#pipeline"><i class="fas fa-project-diagram"></i> CI/CD Pipeline</a></li>
+            <li><a href="#projects"><i class="fas fa-cubes"></i> Projects</a></li>
+            <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
-        <div class="hamburger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <div class="nav-actions">
+            <a href="Pratapareddi_Resume.pdf" download="Pratapareddi_Resume.pdf" class="btn resume-btn" id="nav-resume-btn">
+                <i class="fas fa-file-download"></i> <span>Download Resume</span>
+            </a>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header id="about" class="hero section">
-        <div class="hero-content fade-in">
-            <div class="profile-pic-container">
-                <img src="Pratap%20reddy.png" alt="Pratapareddi Jagannath Kurlageri" class="profile-pic">
-                <div class="pulse-ring"></div>
+        <div class="hero-container">
+            <div class="hero-content fade-in">
+                <div class="status-pill">
+                    <span class="pulse-dot"></span> Available for DevOps Engineer Roles
+                </div>
+                <div class="profile-pic-wrapper">
+                    <div class="profile-pic-container">
+                        <img src="Pratap%20reddy.png" alt="Pratapareddi Jagannath Kurlageri" class="profile-pic">
+                    </div>
+                    <div class="orbital-ring ring-1"></div>
+                    <div class="orbital-ring ring-2"></div>
+                    <div class="orbital-ring ring-3"></div>
+                </div>
+                
+                <h1 class="hero-name">Pratapareddi <span class="highlight">Kurlageri</span></h1>
+                <div class="glitch-wrapper">
+                    <h2 class="glitch-text" data-text="DevOps & Cloud Engineer">DevOps & Cloud Engineer</h2>
+                </div>
+                <p class="summary">
+                    Computer Science Graduate (2024) specialized in <strong>DevOps Automation, Containerization, Infrastructure as Code, and Cloud Deployment</strong>.
+                    Passionate about building scalable CI/CD pipelines, orchestrating Kubernetes clusters, and deploying infrastructure on AWS with Terraform.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn hover-glow"><i class="fas fa-terminal"></i> View Projects</a>
+                    <a href="Pratapareddi_Resume.pdf" target="_blank" class="btn secondary-btn hover-glow"><i class="fas fa-file-pdf"></i> View Resume</a>
+                    <a href="#contact" class="btn outline-btn hover-glow"><i class="fas fa-paper-plane"></i> Contact Me</a>
+                </div>
             </div>
-            <h1>Pratapareddi Jagannath Kurlageri</h1>
-            <h2 class="glitch" data-text="DevOps Engineer">DevOps Engineer</h2>
-            <p class="summary">
-                Computer Science graduate (2024) focused on DevOps. Comfortable with Docker, Kubernetes, CI/CD, Terraform, and AWS. 
-                I build pipelines, automate infrastructure, and ensure seamless deployments.
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn"><i class="fas fa-code-branch"></i> View Projects</a>
-                <a href="#contact" class="btn secondary-btn"><i class="fas fa-paper-plane"></i> Contact Me</a>
+
+            <!-- Interactive DevOps Terminal -->
+            <div class="hero-terminal slide-left">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title"><i class="fas fa-terminal"></i> pratap@devops-node: ~</div>
+                    <div class="terminal-status"><span class="badge-live">LIVE</span></div>
+                </div>
+                <div class="terminal-tabs">
+                    <button class="term-tab active" data-cmd="whoami">whoami.sh</button>
+                    <button class="term-tab" data-cmd="skills">skills.yml</button>
+                    <button class="term-tab" data-cmd="terraform">infra.tf</button>
+                    <button class="term-tab" data-cmd="kubectl">kubectl.sh</button>
+                </div>
+                <div class="terminal-body">
+                    <pre><code id="terminal-output"></code></pre>
+                    <span class="terminal-cursor">█</span>
+                </div>
+                <div class="terminal-footer">
+                    <span><i class="fas fa-server"></i> AWS EC2: Running</span>
+                    <span><i class="fab fa-docker"></i> Docker: Active</span>
+                </div>
             </div>
         </div>
     </header>
 
+    <!-- Technical Skills Section -->
     <section id="skills" class="section">
-        <h2 class="section-title fade-in">Technical Skills</h2>
-        <div class="skills-grid fade-in">
-            <div class="skill-category">
-                <h3><i class="fab fa-docker"></i> Containers</h3>
+        <div class="section-header fade-in">
+            <span class="section-subtitle">&lt;STACK & TOOLS /&gt;</span>
+            <h2 class="section-title">Technical Expertise</h2>
+            <p class="section-description">A breakdown of my hands-on DevOps toolchain and infrastructure skills</p>
+        </div>
+        
+        <div class="skills-grid">
+            <div class="skill-card glass-card fade-in">
+                <div class="skill-icon-header">
+                    <div class="skill-icon docker-color"><i class="fab fa-docker"></i></div>
+                    <span class="skill-level">Advanced</span>
+                </div>
+                <h3>Containers & Orchestration</h3>
+                <p>Building light container images, multi-stage Dockerfiles, compose stacks, and Minikube k8s clusters.</p>
                 <div class="badges">
-                    <span class="badge">Docker</span>
-                    <span class="badge">Docker Compose</span>
-                    <span class="badge">Kubernetes (Minikube)</span>
+                    <span class="badge glowing-badge"><i class="fab fa-docker"></i> Docker</span>
+                    <span class="badge glowing-badge"><i class="fas fa-cubes"></i> Docker Compose</span>
+                    <span class="badge glowing-badge"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                    <span class="badge glowing-badge"><i class="fas fa-server"></i> Minikube</span>
                 </div>
             </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-sync-alt"></i> CI/CD & VCS</h3>
+
+            <div class="skill-card glass-card fade-in">
+                <div class="skill-icon-header">
+                    <div class="skill-icon cicd-color"><i class="fas fa-code-branch"></i></div>
+                    <span class="skill-level">Proficient</span>
+                </div>
+                <h3>CI/CD & Version Control</h3>
+                <p>Automating build, test, and automated EC2 deployment workflows with secrets management.</p>
                 <div class="badges">
-                    <span class="badge">GitHub Actions</span>
-                    <span class="badge">Git</span>
-                    <span class="badge">GitHub</span>
+                    <span class="badge glowing-badge"><i class="fab fa-github"></i> GitHub Actions</span>
+                    <span class="badge glowing-badge"><i class="fab fa-git-alt"></i> Git</span>
+                    <span class="badge glowing-badge"><i class="fab fa-github"></i> GitHub Secrets</span>
+                    <span class="badge glowing-badge"><i class="fas fa-box-open"></i> DockerHub</span>
                 </div>
             </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-cloud"></i> Cloud & IaC</h3>
+
+            <div class="skill-card glass-card fade-in">
+                <div class="skill-icon-header">
+                    <div class="skill-icon cloud-color"><i class="fas fa-cloud"></i></div>
+                    <span class="skill-level">Proficient</span>
+                </div>
+                <h3>Infrastructure as Code & Cloud</h3>
+                <p>Provisioning cloud infrastructure on AWS EC2, S3, IAM, and Security Groups with Terraform declarative code.</p>
                 <div class="badges">
-                    <span class="badge">AWS (EC2, S3, IAM)</span>
-                    <span class="badge">Terraform</span>
+                    <span class="badge glowing-badge"><i class="fas fa-code"></i> Terraform</span>
+                    <span class="badge glowing-badge"><i class="fab fa-aws"></i> AWS EC2</span>
+                    <span class="badge glowing-badge"><i class="fab fa-aws"></i> AWS S3</span>
+                    <span class="badge glowing-badge"><i class="fas fa-shield-alt"></i> IAM & Security Groups</span>
                 </div>
             </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-chart-line"></i> Monitoring & OS</h3>
+
+            <div class="skill-card glass-card fade-in">
+                <div class="skill-icon-header">
+                    <div class="skill-icon monitor-color"><i class="fas fa-chart-area"></i></div>
+                    <span class="skill-level">Hands-on</span>
+                </div>
+                <h3>Monitoring, OS & Scripting</h3>
+                <p>System metrics visualization, health alerts, Nginx reverse proxy configuration, and Linux administration.</p>
                 <div class="badges">
-                    <span class="badge">Prometheus</span>
-                    <span class="badge">Grafana</span>
-                    <span class="badge">Linux (Amazon Linux)</span>
-                    <span class="badge">Bash Scripting</span>
+                    <span class="badge glowing-badge"><i class="fas fa-fire"></i> Prometheus</span>
+                    <span class="badge glowing-badge"><i class="fas fa-chart-line"></i> Grafana</span>
+                    <span class="badge glowing-badge"><i class="fab fa-linux"></i> Linux (Amazon Linux 2023)</span>
+                    <span class="badge glowing-badge"><i class="fas fa-terminal"></i> Bash Scripting</span>
+                    <span class="badge glowing-badge"><i class="fas fa-network-wired"></i> Nginx</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Interactive DevOps Pipeline Visualizer Section -->
+    <section id="pipeline" class="section pipeline-section">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">&lt;AUTOMATION FLOW /&gt;</span>
+            <h2 class="section-title">Automated CI/CD Workflow</h2>
+            <p class="section-description">Interactive architectural representation of how my deployed applications flow from code to cloud</p>
+        </div>
+
+        <div class="pipeline-container glass-card fade-in">
+            <div class="pipeline-nodes">
+                <!-- Node 1 -->
+                <div class="pipe-node active-node" id="node-1">
+                    <div class="node-icon"><i class="fab fa-git-alt"></i></div>
+                    <div class="node-info">
+                        <h4>1. Code Push</h4>
+                        <span>Git Commit to Main</span>
+                    </div>
+                    <div class="node-status green">PASS</div>
+                </div>
+
+                <div class="pipe-connector"><div class="pulse-beam"></div></div>
+
+                <!-- Node 2 -->
+                <div class="pipe-node active-node" id="node-2">
+                    <div class="node-icon"><i class="fab fa-github"></i></div>
+                    <div class="node-info">
+                        <h4>2. GitHub Actions</h4>
+                        <span>CI Pipeline Trigger</span>
+                    </div>
+                    <div class="node-status green">BUILDING</div>
+                </div>
+
+                <div class="pipe-connector"><div class="pulse-beam"></div></div>
+
+                <!-- Node 3 -->
+                <div class="pipe-node active-node" id="node-3">
+                    <div class="node-icon"><i class="fab fa-docker"></i></div>
+                    <div class="node-info">
+                        <h4>3. Docker Registry</h4>
+                        <span>Push to DockerHub</span>
+                    </div>
+                    <div class="node-status green">PUSHED</div>
+                </div>
+
+                <div class="pipe-connector"><div class="pulse-beam"></div></div>
+
+                <!-- Node 4 -->
+                <div class="pipe-node active-node" id="node-4">
+                    <div class="node-icon"><i class="fab fa-aws"></i></div>
+                    <div class="node-info">
+                        <h4>4. AWS EC2 Deploy</h4>
+                        <span>Nginx Reverse Proxy</span>
+                    </div>
+                    <div class="node-status green">ONLINE</div>
+                </div>
+            </div>
+
+            <div class="pipeline-details-box">
+                <div class="pipeline-log"><span class="log-time">[14:05:12]</span> <span class="log-tag">INFO</span> Triggering deployment pipeline... Docker image pushed to registry. EC2 instance pulled latest image. Deployment successful over public IP.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
     <section id="projects" class="section">
-        <h2 class="section-title fade-in">Projects</h2>
+        <div class="section-header fade-in">
+            <span class="section-subtitle">&lt;FEATURED WORK /&gt;</span>
+            <h2 class="section-title">DevOps Projects</h2>
+            <p class="section-description">Hands-on infrastructure automation and orchestration projects</p>
+        </div>
+
         <div class="projects-grid">
-            <div class="project-card slide-up">
-                <div class="project-icon"><i class="fas fa-cogs"></i></div>
+            <!-- Project 1 -->
+            <div class="project-card glass-card slide-up">
+                <div class="project-header">
+                    <div class="project-badge"><i class="fas fa-sync-alt"></i> CI/CD Pipeline</div>
+                    <span class="status-dot-green" title="Deployed"></span>
+                </div>
                 <h3>CI/CD Pipeline with Docker & GitHub Actions</h3>
-                <p>Containerized a web app behind Nginx and set up a GitHub Actions pipeline that builds the image and pushes it to DockerHub on every push to main, deploying it to an EC2 instance.</p>
-                <div class="tech-stack">
-                    <span>Docker</span><span>GitHub Actions</span><span>EC2</span><span>Nginx</span>
+                <p>Containerized a web application behind Nginx reverse proxy. Built an automated GitHub Actions pipeline that triggers on push, builds the image, pushes to DockerHub using GitHub Secrets, and auto-deploys to an AWS EC2 instance.</p>
+                <div class="project-tech">
+                    <span><i class="fab fa-docker"></i> Docker</span>
+                    <span><i class="fab fa-github"></i> Actions</span>
+                    <span><i class="fab fa-aws"></i> AWS EC2</span>
+                    <span><i class="fas fa-network-wired"></i> Nginx</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Pratapreddi" target="_blank" class="btn project-btn"><i class="fab fa-github"></i> Repository</a>
                 </div>
             </div>
-            <div class="project-card slide-up">
-                <div class="project-icon"><i class="fas fa-dharmachakra"></i></div>
-                <h3>Kubernetes Orchestration</h3>
-                <p>Ran a local Kubernetes cluster on EC2 using Minikube. Deployed across 2 replicas, exposed with NodePorts. Tested self-healing and scaled the deployment to 4 replicas using kubectl.</p>
-                <div class="tech-stack">
-                    <span>Kubernetes</span><span>Minikube</span><span>EC2</span>
+
+            <!-- Project 2 -->
+            <div class="project-card glass-card slide-up">
+                <div class="project-header">
+                    <div class="project-badge"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
+                    <span class="status-dot-green" title="Self-Healing Verified"></span>
+                </div>
+                <h3>Kubernetes Orchestration with Minikube</h3>
+                <p>Deployed a local Kubernetes cluster on EC2 using Minikube. Authored Kubernetes deployment manifests running 2 replicas exposed via NodePort. Executed self-healing tests by deleting active pods and scaled deployment from 2 to 4 replicas using <code>kubectl scale</code>.</p>
+                <div class="project-tech">
+                    <span><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                    <span><i class="fas fa-server"></i> Minikube</span>
+                    <span><i class="fab fa-aws"></i> EC2</span>
+                    <span><i class="fas fa-terminal"></i> kubectl</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Pratapreddi" target="_blank" class="btn project-btn"><i class="fab fa-github"></i> Repository</a>
                 </div>
             </div>
-            <div class="project-card slide-up">
-                <div class="project-icon"><i class="fas fa-code"></i></div>
-                <h3>Infrastructure as Code</h3>
-                <p>Used Terraform to provision an EC2 instance with a user-data script installing Docker, alongside a security group allowing SSH, HTTP/S, and app ports. Managed resources with terraform plan/destroy.</p>
-                <div class="tech-stack">
-                    <span>Terraform</span><span>AWS</span><span>EC2</span>
+
+            <!-- Project 3 -->
+            <div class="project-card glass-card slide-up">
+                <div class="project-header">
+                    <div class="project-badge"><i class="fas fa-code"></i> IaC Terraform</div>
+                    <span class="status-dot-green" title="Automated"></span>
+                </div>
+                <h3>Infrastructure as Code with Terraform</h3>
+                <p>Used Terraform to provision an AWS EC2 instance with user-data automation script for Docker installation. Configured custom Security Groups allowing SSH, HTTP/HTTPS, and application ports. Validated state with <code>terraform plan</code> and clean teardown using <code>terraform destroy</code>.</p>
+                <div class="project-tech">
+                    <span><i class="fas fa-code"></i> Terraform</span>
+                    <span><i class="fab fa-aws"></i> AWS EC2</span>
+                    <span><i class="fas fa-shield-alt"></i> Security Groups</span>
+                    <span><i class="fab fa-docker"></i> Docker Script</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Pratapreddi" target="_blank" class="btn project-btn"><i class="fab fa-github"></i> Repository</a>
                 </div>
             </div>
-            <div class="project-card slide-up">
-                <div class="project-icon"><i class="fas fa-tachometer-alt"></i></div>
-                <h3>Monitoring Stack</h3>
-                <p>Implemented Prometheus and Grafana for tracking application and server performance. Monitored system metrics, analyzed dashboards, and gained exposure to performance alerting.</p>
-                <div class="tech-stack">
-                    <span>Prometheus</span><span>Grafana</span><span>Monitoring</span>
+
+            <!-- Project 4 -->
+            <div class="project-card glass-card slide-up">
+                <div class="project-header">
+                    <div class="project-badge"><i class="fas fa-chart-line"></i> Monitoring</div>
+                    <span class="status-dot-green" title="Active Alerts"></span>
+                </div>
+                <h3>Monitoring Stack with Prometheus & Grafana</h3>
+                <p>Set up a complete monitoring and metric visualization stack using Prometheus and Grafana on Linux. Configured Node Exporter to track CPU, memory, network, and disk performance with custom dashboard alerts for server health monitoring.</p>
+                <div class="project-tech">
+                    <span><i class="fas fa-fire"></i> Prometheus</span>
+                    <span><i class="fas fa-chart-line"></i> Grafana</span>
+                    <span><i class="fas fa-microchip"></i> Node Exporter</span>
+                    <span><i class="fab fa-linux"></i> Linux</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Pratapreddi" target="_blank" class="btn project-btn"><i class="fab fa-github"></i> Repository</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Experience & Education Timeline -->
     <section id="experience" class="section">
-        <h2 class="section-title fade-in">Experience & Education</h2>
-        <div class="timeline fade-in">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
+        <div class="section-header fade-in">
+            <span class="section-subtitle">&lt;CAREER PATH /&gt;</span>
+            <h2 class="section-title">Experience & Education</h2>
+            <p class="section-description">My professional journey and academic background</p>
+        </div>
+
+        <div class="timeline-container fade-in">
+            <!-- Item 1 -->
+            <div class="timeline-card glass-card">
+                <div class="timeline-badge-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="timeline-header">
                     <h3>DevOps Intern</h3>
-                    <h4>Pixlpro Consulting Services Pvt.Ltd.</h4>
-                    <span class="date">Dec 2025 – May 2026</span>
-                    <p>Managed AWS EC2 instances for application hosting, server setup, and basic administration. Deployed applications on cloud servers.</p>
+                    <span class="timeline-date"><i class="far fa-calendar-alt"></i> Dec 2025 – May 2026</span>
+                </div>
+                <h4 class="company-name"><i class="fas fa-building"></i> Pixlpro Consulting Services Pvt. Ltd. (A DevDigital Company)</h4>
+                <p>Managed AWS EC2 instances for web application hosting, automated server provisioning, performed system administration, and deployed applications on cloud servers.</p>
+                <div class="timeline-tags">
+                    <span>AWS EC2</span><span>Cloud Admin</span><span>Server Setup</span><span>App Deployment</span>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>B.E., Computer Science & Engineering</h3>
-                    <h4>KLE Institute of Technology, Hubli</h4>
-                    <span class="date">Graduated 2024</span>
-                    <p>Coursework: Operating Systems, Computer Networks, Cloud Computing, Database Management.</p>
+
+            <!-- Item 2 -->
+            <div class="timeline-card glass-card">
+                <div class="timeline-badge-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="timeline-header">
+                    <h3>B.E. in Computer Science & Engineering</h3>
+                    <span class="timeline-date"><i class="far fa-calendar-alt"></i> Graduated 2024</span>
+                </div>
+                <h4 class="company-name"><i class="fas fa-university"></i> KLE Institute of Technology, Hubli, Karnataka</h4>
+                <p>Focused on core computer science subjects, operating systems, cloud computing architectures, network protocols, and database management systems.</p>
+                <div class="timeline-tags">
+                    <span>Operating Systems</span><span>Computer Networks</span><span>Cloud Computing</span><span>DBMS</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact & Resume Download Section -->
     <section id="contact" class="section">
-        <h2 class="section-title fade-in">Get In Touch</h2>
-        <div class="contact-container fade-in">
-            <p>I'm currently looking for a DevOps Engineer role to work on build pipelines, infrastructure, and deployment automation. My inbox is always open!</p>
-            <div class="contact-links">
-                <a href="mailto:pratap.reddi99@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    pratap.reddi99@gmail.com
+        <div class="contact-box glass-card fade-in">
+            <div class="contact-header">
+                <span class="section-subtitle">&lt;CONNECT /&gt;</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p>I am actively seeking <strong>DevOps Engineer</strong> opportunities. Feel free to download my resume or get in touch directly!</p>
+            </div>
+
+            <div class="contact-cta-wrapper">
+                <a href="Pratapareddi_Resume.pdf" download="Pratapareddi_Resume.pdf" class="btn primary-btn main-resume-btn hover-glow">
+                    <i class="fas fa-file-download"></i> Download Full Resume (PDF)
                 </a>
-                <a href="tel:+918951513193" class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    +91 8951513193
+            </div>
+
+            <div class="contact-grid">
+                <a href="mailto:pratap.reddi99@gmail.com" class="contact-card hover-glow">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-details">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">pratap.reddi99@gmail.com</span>
+                    </div>
                 </a>
-                <a href="https://linkedin.com/in/pratapareddi-kurlageri-34b418174" target="_blank" class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    LinkedIn
+
+                <a href="tel:+918951513193" class="contact-card hover-glow">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-details">
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value">+91 8951513193</span>
+                    </div>
                 </a>
-                <a href="https://github.com/Pratapreddi" target="_blank" class="contact-item">
-                    <i class="fab fa-github"></i>
-                    GitHub
+
+                <a href="https://linkedin.com/in/pratapareddi-kurlageri-34b418174" target="_blank" class="contact-card hover-glow">
+                    <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <div class="contact-details">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">pratapareddi-kurlageri</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Pratapreddi" target="_blank" class="contact-card hover-glow">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <div class="contact-details">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/Pratapreddi</span>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Pratapareddi Jagannath Kurlageri. Built with <i class="fas fa-code"></i></p>
+        <div class="footer-content">
+            <div class="footer-logo">&lt;Pratap Kurlageri /&gt;</div>
+            <p>&copy; 2026 Pratapareddi Jagannath Kurlageri. Designed & Built for DevOps Excellence.</p>
+            <div class="footer-status"><span class="pulse-dot green"></span> All Systems Operational</div>
+        </div>
     </footer>
 
-    <!-- Particles.js for background animation -->
+    <!-- Particles.js Script -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
