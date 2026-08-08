@@ -995,6 +995,30 @@ nav {
     gap: 8px;
 }
 
+.experience-list {
+    list-style: none;
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.experience-list li {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.experience-list li i {
+    color: var(--accent-cyan);
+    font-size: 0.85rem;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
 .timeline-card p {
     color: var(--text-secondary);
     margin-bottom: 1rem;

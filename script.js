@@ -38,21 +38,24 @@ const terminalData = {
     whoami: `> whoami --verbose
 [NAME]: Pratapareddi Jagannath Kurlageri
 [ROLE]: DevOps & Cloud Engineer
-[GRADUATION]: B.E. Computer Science (2024)
-[LOCATION]: Hubli, Karnataka, India
-[STATUS]: Ready to automate infrastructure & CI/CD workflows!`,
+[EXPERIENCE]: DevOps & Cloud Engineer @ Pixlpro Consulting (2025-2026)
+              DevOps & Cloud Trainer @ Pixlpro Consulting (2025)
+[EDUCATION]: B.E. Computer Science & Engineering (2024)
+[STATUS]: Ready to automate cloud infrastructure & CI/CD pipelines!`,
 
     skills: `> cat skills.yml
 containers:
   - Docker & Docker Compose
-  - Kubernetes (Minikube, Pod scaling, Self-healing)
+  - Kubernetes (Minikube), AWS EKS, Helm
 cloud_infrastructure:
-  - AWS (EC2, S3, IAM, Security Groups)
+  - AWS (EC2, S3, IAM, EKS, CloudWatch, CloudTrail)
   - Terraform (Declarative IaC, State management)
 cicd_automation:
-  - GitHub Actions, Nginx, DockerHub
+  - GitHub Actions, Jenkins, Nginx, DockerHub
 monitoring:
-  - Prometheus, Grafana, Node Exporter`,
+  - Prometheus, Grafana, Node Exporter, CloudWatch
+scripting:
+  - Python, Bash Scripting, Linux (Amazon Linux 2023)`,
 
     terraform: `> terraform plan -out=main.tfplan
 Terraform used the selected providers to generate the following execution plan:
@@ -62,10 +65,13 @@ Terraform used the selected providers to generate the following execution plan:
     ami:                   "ami-0c55b159cbfafe1f0" (Amazon Linux 2023)
     instance_type:         "t2.micro"
     user_data:             "#!/bin/bash sudo yum install docker -y..."
++ aws_eks_cluster.main
+    id:                    (known after apply)
+    name:                  "production-eks-cluster"
 + aws_security_group.allow_traffic
     ports:                 [22, 80, 443, 8080]
 
-Plan: 2 to add, 0 to change, 0 to destroy.`,
+Plan: 3 to add, 0 to change, 0 to destroy.`,
 
     kubectl: `> kubectl get pods -n production -o wide
 NAME                        READY   STATUS    RESTARTS   AGE     IP
